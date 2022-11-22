@@ -16,7 +16,6 @@ public class Figurinha{
 
     public Figurinha() {
     }
-
     public String getNomeJogador() {
         return nome;
     }
