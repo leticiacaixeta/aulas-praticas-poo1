@@ -23,54 +23,6 @@ public class Figurinha {
     protected float altura;
     protected float peso;
 
-    public String getNomeJogador() {
-        return nomeJogador;
-    }
-
-    public void setNomeJogador(String nomeJogador) {
-        this.nomeJogador = nomeJogador;
-    }
-
-    public String getPosicao() {
-        return posicao;
-    }
-
-    public void setPosicao(String posicao) {
-        this.posicao = posicao;
-    }
-
-    public String getPais() {
-        return pais;
-    }
-
-    public void setPais(String pais) {
-        this.pais = pais;
-    }
-
-    public LocalDate getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(LocalDate dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public float getAltura() {
-        return altura;
-    }
-
-    public void setAltura(float altura) {
-        this.altura = altura;
-    }
-
-    public float getPeso() {
-        return peso;
-    }
-
-    public void setPeso(float peso) {
-        this.peso = peso;
-    }
-
     public Figurinha(String nome, String posicao, String pais, LocalDate data, float altura, float peso) {
         this.nomeJogador = nome;
         this.posicao = posicao;
