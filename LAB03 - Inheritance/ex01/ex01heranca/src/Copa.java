@@ -24,7 +24,7 @@ public class Copa {
 
         estadosunidos.MostrarFigurinha();
 
-        FigurinhaExtra franca = new FigurinhaExtra("Alphonse Areola", "Goleiro", "França",  LocalDate.parse("1993-02-27"), 1.95f, 94f, "Legends", "Bronze");
+        FigurinhaExtra franca = new FigurinhaExtra("Alphonse Areola", "Goleiro", "França", LocalDate.parse("1993-02-27"), 1.95f, 94f, "Legends", "Bronze");
 
         franca.MostrarFigurinha();
 
