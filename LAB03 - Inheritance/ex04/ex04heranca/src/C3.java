@@ -18,56 +18,52 @@ atributos de um objeto e que utilize super.
 */
 
 public class C3 extends C2 {
+    public String cidade;
+    private String pais;
+    protected String cnpj;
 
     public C3() {
+        super();
         System.out.println("Classe C3: chamada do construtor padrao, sem parametros");
     }
 
-    public C3(int publico, int protegido, int privado) {
-        this.publico = publico;
-        this.protegido = protegido;
-        this.privado = privado;
+    public C3(String cidade, String pais, String cnpj) {
+        this.cidade = cidade;
+        this.pais = pais;
+        this.cnpj = cnpj;
         System.out.println("Classe C3: chamada do construtor com parametros");
     }
 
-    public C3(C2 classe2) {
-        super(classe2.publico(), classe2.protegido(), classe2.getPrivado());
+    public String getCidade() {
+        return cidade;
     }
 
-    public int getPublico() {
-        return publico;
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
     }
 
-    public void setPublico(int publico) {
-        this.publico = publico;
+    public String getPais() {
+        return pais;
     }
 
-    public int getProtegido() {
-        return protegido;
+    public void setPais(String pais) {
+        this.pais = pais;
     }
 
-    public void setProtegido(int protegido) {
-        this.protegido = protegido;
+    public String getCnpj() {
+        return cnpj;
     }
 
-    public int getPrivado() {
-        return privado;
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
-    public void setPrivado(int privado) {
-        this.privado = privado;
+    public String mostrar_atributos() {
+        return "C3:\n" +
+            "Cidade: "+ this.cidade + "\nPaís: " + getPais() + "\nCNPJ: " + this.cnpj;
     }
 
-    public void mostrar_atributos() {
-        System.out.println("Público: " + publico + "\nProtegido: " + protegido + "\nPrivado: " + getPrivado() + "\n");
-    }
-
-    public mostrar_atributos_super(int publico, int protegido, int privado) {
-        super(publico, protegido, getPrivado());
-    }
-
-    public void mostrar_atributos_super() {
-        super.mostrar_atributos_super();
-        System.out.println("Público: " + publico + "\nProtegido: " + protegido + "\nPrivado: " + getPrivado() + "\n");
+    public String mostrar_atributos_super() {
+        return super.mostrar_atributos();
     }
 }
