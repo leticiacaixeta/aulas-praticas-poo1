@@ -16,12 +16,12 @@ public class Main {
 
         Estudante[] estudantes = new Estudante[10];
         Estudante[] estudantesPosGraduacao = new Estudante[10];
-        estudantes[0] = new EstudanteDoutorado("Bruno", "Rua Inverno", "Tecnologia", "Processamento de Imagens", "Carros Inteligentes");
-        estudantes[1] = new EstudanteMestrado("Carla", "Rua Primavera", "Medicina", "Vacinas de RNA", "academico", "Anticorpos");
-        estudantes[2] = new EstudanteGraduacao("Lucia", "Rua Maio", "Java is funny");
-        estudantes[3] = new EstudanteDoutorado("Bruno", "Rua Inverno", "Tecnologia", "Processamento de Imagens", "Carros Inteligentes");
-        estudantes[4] = new EstudanteMestrado("Ana", "Rua Primavera", "Medicina", "Vacinas de RNA", "academico", "Anticorpos");
-        estudantes[5] = new EstudanteDoutorado("Guilherme", "Rua Inverno", "Tecnologia", "Processamento de Imagens", "Carros Inteligentes");
+        estudantes[0] = new EstudanteDoutorado("Luiza", "Rua Espirito Santo", "Farmácia", "Vacinação", "Importância da vacinação infantil");
+        estudantes[1] = new EstudanteMestrado("Maria", "Rua Salvador", "Nutrição", "Alimentação", "Acadêmico", "Prevenção da compulsão alimentar");
+        estudantes[2] = new EstudanteGraduacao("Carlos", "Rua Niterói", "Data Science");
+        estudantes[3] = new EstudanteDoutorado("Amanda", "Rua Jataí", "Ciências da Computação", "Processamento de Imagens", "Inteligência Artificial");
+        estudantes[4] = new EstudanteMestrado("Gabriel", "Rua Natal", "Medicina", "Vacinas de RNA", "Acadêmico", "Anticorpos");
+        estudantes[5] = new EstudanteDoutorado("Marcos", "Rua Belém", "Veterinária", "Animais de Grande Porte", "Bovinocultura de Leite");
 
         Universidade universidade1 = new Universidade("UFU", LocalDate.now(), estudantes);
 
@@ -29,11 +29,11 @@ public class Main {
 
         Universidade universidade2 = new Universidade("UFU", LocalDate.now(), estudantesPosGraduacao);
 
-        System.out.println("| Universidade 1 |");
+        System.out.println("Universidade 1");
         System.out.println("");
         universidade1.mostraAlunos();
         System.out.println("");
-        System.out.println(" | Universidade 2 | ");
+        System.out.println("Universidade 2");
         universidade2.mostraAlunosCompleto();
     }
 
