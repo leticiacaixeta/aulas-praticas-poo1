@@ -1,0 +1,106 @@
+public abstract class ContaCorrente {
+    private float saldo;
+    private int estado;
+    private int numConta;
+    private int senha;
+
+    public ContaCorrente(float saldo, int numConta, int senha) {
+        this.saldo = saldo;
+        this.numConta = numConta;
+        this.senha = senha;
+        estado = 1; //conta ativa
+    }
+
+    public float getSaldo() {
+        return saldo;
+    }
+
+    public void setSaldo(float saldo) {
+        this.saldo = saldo;
+    }
+
+    public int getEstado() {
+        return estado;
+    }
+
+    public void setEstado(int estado) {
+        this.estado = estado;
+    }
+
+    public int getNumConta() {
+        return numConta;
+    }
+
+    public void setNumConta(int numConta) {
+        this.numConta = numConta;
+    }
+
+    public int getSenha() {
+        return senha;
+    }
+
+    public void setSenha(int senha) {
+        this.senha = senha;
+    }
+
+    public boolean debitaValor(float val, int pwd) {
+        if (pwd != senha)
+            return (false); //a conta deve ser válida
+        if (estado != 1)
+            return (false); //a conta deve ser ativa
+        if (val <= 0)
+            return (false); //val > 0
+        if (val > saldo)
+            return (false);
+
+        saldo -= val;
+        if (saldo == 0)
+            estado = 2; //torna conta inativa
+        return true;
+    }
+
+    public void debitaValor(float val) {
+        saldo -= val;
+    }
+
+    public float getSaldo(int pwd) {
+        if (senha == pwd)
+            return saldo;
+        else
+            return -1;
+    }
+
+    public void creditaValor(int pwd, float val) {
+        if (senha == pwd)
+            saldo += val;
+    }
+
+    protected int getEstado(int pwd) {
+        if (senha == pwd)
+            return estado;
+        else
+            return -1;
+    }
+
+    protected void setEstado(int pwd, int e) {
+        if (senha == pwd)
+            estado = e;
+    }
+
+    protected boolean isSenha(int pwd) {
+        if (senha == pwd)
+            return true;
+        else
+            return false;
+    }
+
+    public void setSaldoContaEspecialEspecial(ContaCorrente conta, float val){
+        if(conta instanceof ContaEspecial){
+            saldo = val;
+        }
+    }
+
+    protected ContaComum converterParaContaComum(){
+        return new ContaComum(saldo, numConta, senha);
+    }
+}
