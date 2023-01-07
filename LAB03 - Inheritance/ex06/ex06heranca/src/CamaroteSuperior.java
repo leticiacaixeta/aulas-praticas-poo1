@@ -14,6 +14,11 @@ public class CamaroteSuperior extends VIP {
     public CamaroteSuperior(){
     }
 
+    public CamaroteSuperior(double valor, double valorAdicional, double valorAdicionalSuperior){
+        super(valor, valorAdicional);
+        this.valorAdicionalSuperior= valorAdicionalSuperior;
+    }
+
     public double getTaxaSuperior() {
         return valorAdicionalSuperior;
     }

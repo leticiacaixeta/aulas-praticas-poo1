@@ -11,6 +11,14 @@ Esta última possui um método para retornar o valor do ingresso. Ambas as class
 public class VIP extends Ingresso {
     private double valorAdicional;
 
+    public VIP(){
+    }
+
+    public VIP(double valor, double valorAdicional){
+        super(valor);
+        this.valorAdicional = valorAdicional;
+    }
+
     public double getValorAdicional() {
         return valorAdicional;
     }
@@ -20,6 +28,6 @@ public class VIP extends Ingresso {
     }
 
     public double valorVip(){
-        return (this.valorAdicional + super.escreveValor());
+        return (this.getValorAdicional() + super.escreveValor());
     }
 }

@@ -12,10 +12,9 @@ public class Main {
     public static void main(String[] args) {
 
         Normal ingressoNormal = new Normal();
-        VIP ingressoVip = new VIP();
-
-        CamaroteInferior camInf = new CamaroteInferior();
-        CamaroteSuperior camSup = new CamaroteSuperior();
+        VIP ingressoVip = new VIP(15.0, 6.50);
+        CamaroteInferior camInf = new CamaroteInferior(40.0, 6.0, "Pista");
+        CamaroteSuperior camSup = new CamaroteSuperior(50.0, 60.0, 6.0);
 
         ingressoNormal.setValor(15.0);
         System.out.println("Valor do ingresso normal: " + ingressoNormal.escreveValor()+"\n");
@@ -24,9 +23,9 @@ public class Main {
         ingressoVip.setValorAdicional(5.50);
         System.out.println("Valor do ingresso VIP: " + ingressoVip.valorVip()+"\n");
 
-        camInf.setLocalizacao("Pista");
+        camInf.setLocalizacao("Pista2");
         camInf.setValor(50);
-        System.out.println("Camarote Inferior: " + camInf.getValor() + " - Localização: " + camInf.getLocalizacao()+"\n");
+        System.out.println("Camarote Inferior: " + camInf.getValorCamaroteInferior() + " - Localização: " + camInf.getLocalizacao()+"\n");
 
         camSup.setTaxaSuperior(10.0);
         camSup.setValor(60);

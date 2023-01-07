@@ -14,6 +14,10 @@ public class Ingresso{
     public Ingresso() {
     }
 
+    public Ingresso(double valor) {
+        this.valor = valor;
+    }
+
     public double getValor() {
         return valor;
     }

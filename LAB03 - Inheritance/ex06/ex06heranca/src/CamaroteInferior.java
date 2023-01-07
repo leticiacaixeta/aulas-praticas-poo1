@@ -14,12 +14,21 @@ public class CamaroteInferior extends VIP {
     public CamaroteInferior() {
     }
 
+    public CamaroteInferior(double valor, double valorAdicional, String localizacao){
+        super(valor, valorAdicional);
+        this.localizacao = localizacao;
+    }
+
     public void setLocalizacao(String localizacao) {
         this.localizacao = localizacao;
     }
 
     public String getLocalizacao() {
         return this.localizacao;
+    }
+
+    public double getValorCamaroteInferior(){
+        return (super.valorVip());
     }
 
     public void imprimeLocalizao() {
